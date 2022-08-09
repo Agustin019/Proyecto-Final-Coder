@@ -122,4 +122,4 @@ function enCuotas(){
 
 enCuotas();
 
-alert("¡Hasta Pronto!")
+alert("¡Hasta Pronto!") 
