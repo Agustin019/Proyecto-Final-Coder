@@ -34,7 +34,7 @@ while(seleccion != "si" && seleccion != "no"){   // ciclo while para que el clie
 if(seleccion =="si"){  //en caso de responder "si" se le mostrara al cliente los productos disponibles
     alert("A continuacion le mostraremos nuestros productos")
 
-    let todosLosProductos = productos.map((productos) => productos.nombre + " " + "$" + productos.precio ) // asignamos la variable todosLosProductos usando el metodo map para meternos en el array de productos , usamos la funcion flecha y concatenamos el nombre , el precio y los simbolos
+    let todosLosProductos = productos.map(productos => productos.nombre + " " + "$" + productos.precio ) // asignamos la variable todosLosProductos usando el metodo map para meternos en el array de productos , usamos la funcion flecha y concatenamos el nombre , el precio y los simbolos
     
     alert(todosLosProductos.join(" - ")) //metodo join y " - " , para organizar los productos en la salida del alert
 } else if(seleccion =="no"){
