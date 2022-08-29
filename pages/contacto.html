@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script defer src="js/index.js"></script>
+
+    <title>FLorBazar | Contácto</title>
+</head>
+<body>
+
+    <header>
+        <div class="cont-nav fixed-top">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid container-nav">
+                    <a class="navbar-brand logo" href="#"><span>Flor</span>Bazar</a>
+                   
+    
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="pages/contacto.html">contacto</a>                   
+                      </li>
+                    </ul>
+                    
+                  </div> <!--navbar-collapse-->
+    
+                  <a id="toggleMyModal" class="navbar-brand"  data-bs-toggle="modal" data-bs-target="#exampleModal" href="">
+                      <i class="bi bi-cart4"></i>
+                    </a>
+                    
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+                  
+                    
+                </div><!-- container-fluid -->
+              </nav>
+        </div>
+    </header>
+    
+    <main id="cont-contact" class="contenedor">
+
+        <div class="contact-wrapper">
+
+            <div class="contact-form">
+                <h1 class="contact-title centrar-texto">Contactanos!</h1>
+
+                <form action="">
+                    <p>
+                        <label for="fullname">Nombre Completo</label>
+                        <input type="text" name="Nombre Completo" id="fullname">
+                    </p>
+                    <p>
+                        <label for="email">Email</label>
+                        <input type="email" name="Email" id="email">
+                    </p>
+                    <p>
+                        <label>Telefono</label>
+                        <input type="tel" name="Numero de Telefono">
+                    </p>
+                    <p>
+                        <label>Asunto</label>
+                        <input type="text" name="Asunto">
+                    </p>
+                    <p class="block">
+                        <label>Mensaje</label>
+                        <textarea name="Mensaje" rows="3"></textarea>
+                    </p>
+                    <p class="block">
+                        <button  type="submit">
+                            Enviar
+                        </button>
+                    </p>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h2>Más informacion</h2>
+                <ul>
+                    <li><i class="bi bi-geo-alt-fill"></i> Mar Del Plata</li>
+                    <li><i class="bi bi-telephone-fill"></i> +54 9 223 692-7705</li>
+                    <li><i class="bi bi-envelope-fill"></i> florbazarmdq@gmail.com</li>
+                </ul>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam et perspiciatis amet autem architecto error eaque odio porro deleniti pariatur.</p>
+            </div>
+        </div>
+
+
+    </main>
+
+</body>
+</html>
