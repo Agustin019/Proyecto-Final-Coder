@@ -119,15 +119,24 @@ function dibujarCarrito() {
 
     //contenedorCarritoCompras.innerHTML = renglonesCarrito;
     
-    if(elementosCarrito.length == 0) {
-        contenedorFooterCarrito.innerHTML = `
-            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
-        `;
-    } else {
-        contenedorFooterCarrito.innerHTML = `
-            <th scope="row" colspan="5">Total de la compra: $${estandarDolaresAmericanos.format(sumaCarrito)}</th>
-        `;
-    }
+    // if(elementosCarrito.length == 0) {
+    //     contenedorFooterCarrito.innerHTML = `
+    //         <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+    //     `;
+    // } else {
+    //     contenedorFooterCarrito.innerHTML = `
+    //         <th scope="row" colspan="5">Total de la compra: $${estandarDolaresAmericanos.format(sumaCarrito)}</th>
+    //     `;
+    // }
+
+    (elementosCarrito.length == 0) ? contenedorFooterCarrito.innerHTML = `
+     <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+     
+       ` : 
+       contenedorFooterCarrito.innerHTML = `
+     <th scope="row" colspan="5">Total de la compra: $${estandarDolaresAmericanos.format(sumaCarrito)}</th>
+
+       `;
     
     
 
