@@ -88,6 +88,15 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+img{
+  min-height:200px ;
+  max-height: 201px ;
+}
+
+.tarjetas{
+  max-height:350px ;
+}
+
 
 hr {
   margin: 1rem 0;
