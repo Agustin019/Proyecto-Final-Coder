@@ -73,14 +73,7 @@ function dibujarCarrito() {
     let sumaCarrito = 0;
     contenedorCarritoCompras.innerHTML = "";
 
-    
-    localStorage.setItem("elementosCarrito" , JSON.stringify(elementosCarrito));
-    localStorage.getItem('elementosCarrito')
-    if(localStorage.getItem('elementosCarrito')===null){
-        elementosCarrito = []
-    }else{
-        elementosCarrito = JSON.parse(localStorage.getItem('elementosCarrito'));
-    }     
+        
 
     elementosCarrito.forEach(
         (elemento) => {
@@ -120,18 +113,6 @@ function dibujarCarrito() {
     ); 
 
 
-    //contenedorCarritoCompras.innerHTML = renglonesCarrito;
-    
-    // if(elementosCarrito.length == 0) {
-    //     contenedorFooterCarrito.innerHTML = `
-    //         <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
-    //     `;
-    // } else {
-    //     contenedorFooterCarrito.innerHTML = `
-    //         <th scope="row" colspan="5">Total de la compra: $${estandarDolaresAmericanos.format(sumaCarrito)}</th>
-    //     `;
-    // }
-
     (elementosCarrito.length == 0) ? contenedorFooterCarrito.innerHTML = `
      <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
      
@@ -167,6 +148,7 @@ function crearCard(producto) {
     `;
     cuerpoCarta.append(botonAgregar);
 
+
     //Imagen
     let imagen = document.createElement("img");
     imagen.src = producto.foto;
@@ -184,16 +166,17 @@ function crearCard(producto) {
     //Agregar algunos eventos
     botonAgregar.onclick = () => {
 
-
+        
         let elementoExistente = elementosCarrito.find((elemento) => elemento.producto.id == producto.id);
-
+        
         if(elementoExistente) {
             elementoExistente.cantidad+=1;
         } else {
             let elementoCarrito = new ElementoCarrito(producto, 1);
             elementosCarrito.push(elementoCarrito);
         }
-
+        /* metodo para almacenar en el storage los elementos del carrito */
+        localStorage.setItem("elementosCarrito" , JSON.stringify(elementosCarrito));
         dibujarCarrito();
 
         swal({
@@ -240,20 +223,14 @@ function dibujarCatalogoProductos() {
 }   
 
 
+/* Prueba de local storage */
 
-    // localStorage.setItem("elementosCarrito" , JSON.stringify(elementosCarrito))
-
-
-// function addLocalStorage(){
-//     localStorage.setItem('elementosCarrito' , JSON.stringify(elementosCarrito))
-// }
-
-
-// window.onload = function (){
-//     const storage = localStorage.getItem('elementosCarrito');
-//     if(storage){
-//        carrito = storage;
-//        dibujarCarrito()
-//     }
-// }
+   
+    
+     if(localStorage.getItem('elementosCarrito')===null){
+         elementosCarrito = []
+     }else{
+     elementosCarrito = JSON.parse(localStorage.getItem('elementosCarrito'));
+     dibujarCarrito()
+     } 
 
