@@ -23,6 +23,8 @@ const estandarDolaresAmericanos = Intl.NumberFormat('en-US');
 const productos = [];
 let elementosCarrito = [];
 
+
+
 const contenedorProductos = document.getElementById('contenedor-productos');
 
 const contenedorCarritoCompras = document.querySelector("#items")
@@ -34,7 +36,6 @@ const contenedorFooterCarrito = document.querySelector("#footer");
  */
 
 cargarProductos();
-cargarCarrito();
 dibujarCarrito();
 dibujarCatalogoProductos();
 
@@ -47,18 +48,26 @@ function cargarProductos() {
     productos.push(new Producto(002,"Mate forrado sintetico tipo Pampa xl negro", 1400, "./img/mate_forrado_tipo_pampa.jpg"));
     productos.push(new Producto(003,"Mate Lalo termico de PVC engomado", 1030, "./img/mate_lalo.jpg",));
     productos.push(new Producto(004,"Mate olivia cero termico", 950, "./img/mate_olivia.jpg", ));
-    productos.push(new Producto(005,"Mate tipo Stanley con bombilla y caja de regalo", 2200, "./img/mate_pampa.jpg",));
-    productos.push(new Producto(006,"Mate Pampa varios colores con bombilla y estuche", 1470, "./img/mate_tipo_stanley.jpg",));
+    productos.push(new Producto(005,"Mate tipo Stanley con bombilla y caja de regalo", 2200, "./img/mate_tipo_stanley.jpg",));
+    productos.push(new Producto(006,"Mate Pampa varios colores con bombilla y estuche", 1470, "./img/mate_pampa.jpg" ));
+    productos.push(new Producto(007,"Termo tipo Stanley KALPANA", 5399, "./img/Termo tipo Stanley KALPANA.jpg" ));
+    productos.push(new Producto(08,"Termo Stanley Charly 1200cc", 5199, "./img/Termo Stanley Charly 1200cc.jpg" ));
+    productos.push(new Producto(09,"Termo engomado de 620cc", 2299, "./img/termo engomado de 620cc.jpg" ));
+    productos.push(new Producto(010,"Termo de acero de 500cc.jpg", 2899, "./img/Termo de acero de 500cc.jpg" ));
+    productos.push(new Producto(011,"Termo de acero de 1 lt.jpg", 3699, "./img/Termo de acero de 1 lt.jpg" ));
+    productos.push(new Producto(012,"Termo de acero color media manija de 1 litro", 2999, "./img/Termo de acero color media manija de 1 litro.jpg" ));
+    productos.push(new Producto(013,"Termo brikenia engomado de 1200cc", 2949, "./img/termo brikenia engomado de 1200cc.jpg" ));
+    productos.push(new Producto(014,"Termo acero media manija de 1 litro", 3999, "./img/Termo acero media manija de 1 litro.jpg" ));
+
+    productos.push(new Producto(014,"Botella termica de 600cc con filtro", 2899, "./img/Botella termica de 600cc con filtro.jpg" ));
+    productos.push(new Producto(014,"Botella térmica con pico color pastel de 600cc", 3200, "./img/Botella térmica con pico color pastel de 600cc.jpg" ));
+    productos.push(new Producto(014,"Botella de acero sport brikenia de 350cc", 2499, "./img/Botella de acero sport brikenia de 350cc.jpg" ));
+    productos.push(new Producto(014,"Botella de acero de 500cc color pastel degrade", 3299, "./img/Botella de acero de 500cc color pastel degrade.jpg" ));
+    productos.push(new Producto(014,"Botella de acero color pastel de 500cc", 2799, "./img/Botella de acero color pastel de 500cc.jpg" ));
+    productos.push(new Producto(014,"Botella acero de 750cc termica", 3499, "./img/Botella acero de 750cc termica.jpg" ));
 }
 
-function cargarCarrito() {
-    /*let elementoCarrito = new ElementoCarrito(
-        new Producto(1, 'Muffin', 1.99, './img/muffin.jpg'),
-        1
-    );
 
-    elementosCarrito.push(elementoCarrito);*/
-}
 
 function dibujarCarrito() {
 
@@ -67,17 +76,12 @@ function dibujarCarrito() {
 
     
     localStorage.setItem("elementosCarrito" , JSON.stringify(elementosCarrito));
-
-     if(localStorage.getItem('elementosCarrito')===null){
-         elementosCarrito = []
-     }else{
-         elementosCarrito = JSON.parse(localStorage.getItem('elementosCarrito'));
-     }
-
-    
-   // localStorage.setItem("elementosCarrito") === null ? elementosCarrito = [] : elementosCarrito = JSON.parse(localStorage.getItem('elementosCarrito'));
-     
-     
+    localStorage.getItem('elementosCarrito')
+    if(localStorage.getItem('elementosCarrito')===null){
+        elementosCarrito = []
+    }else{
+        elementosCarrito = JSON.parse(localStorage.getItem('elementosCarrito'));
+    }     
 
     elementosCarrito.forEach(
         (elemento) => {
@@ -108,7 +112,7 @@ function dibujarCarrito() {
 
             let borrarProducto = document.getElementById(`eliminar-producto-${elemento.producto.id}`);
 
-            borrarProducto.addEventListener("click", (e) => {
+            borrarProducto.addEventListener("click", () => {
                 removerProductoCarrito(elemento);
                 dibujarCarrito();
             });
@@ -177,14 +181,10 @@ function crearCard(producto) {
     carta.append(imagen);
     carta.append(cuerpoCarta);
 
-    //Contenedor Card
-    //let contenedorCarta = document.createElement("div");
-    //contenedorCarta.className = "col-xs-6 col-sm-3 col-md-2";
-    //contenedorCarta.append(carta);
 
     //Agregar algunos eventos
     botonAgregar.onclick = () => {
-        //alert("Hiciste click en el producto" + producto.nombre);
+
 
         let elementoExistente = elementosCarrito.find((elemento) => elemento.producto.id == producto.id);
 

@@ -96,6 +96,13 @@ img{
     max-height: 100vh;
 }
 
+#toggleMyModal{
+    position: absolute;
+    right: 0;
+    top:0;
+    margin-top:2rem ;
+    margin-right: 6rem;
+}
 
 /* -- banner inicio --  */
 
@@ -120,13 +127,35 @@ img{
 }
 
 .banner-inicio-cont{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 10rem;
+}
+
+.banner-inicio-cont__btns{
+    display: flex;
+    gap: 2rem;
+}
+
+.banner-inicio-cont__btns__boton{
+    background-color: var(--secundario);
+    font-size: 2rem;
+    color: var(--blanco);
+    font-family: var(--fuenteHeading);
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 1rem;
+    transition: ease-out .3s;
+}
+
+
+.banner-inicio-cont__btns__boton:hover{
+    background-color: #ff97d9;
 }
 
 /*---- MODAL-----*/
@@ -137,12 +166,14 @@ img{
 #exampleModal button{
     font-size: 1.8rem;
 }
-
+#burger{
+    color: var(--blanco);
+}
 
 /* ---seccion principal--- */
 
 #contenedor-productos{
-    max-width:80rem ;
+    max-width:120rem ;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-evenly ;
@@ -194,6 +225,44 @@ img{
     font-weight: 700;
     font-size: 1.5rem;
 }
+
+
+
+/*---- Footer ----*/
+.cont-footer{
+    margin-top: 5rem;
+    background-color: #ff97d9;
+    width: 100%;
+    min-height: 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cont-footer__copy{
+    color: var(--blanco);
+    font-family: var(--fuenteParrafos);
+    font-weight: 400;
+    font-size: 1.7rem;
+    text-align: center;
+    grid-column: 2;
+    margin:auto 0;
+}
+
+.cont-footer__redes{
+    color: var(--blanco);
+    grid-column: 1;
+    margin:auto;
+}
+
+.cont-footer__redes i{
+    font-size: 2.5rem;
+    padding: .7rem;
+    color: var(--blanco);
+}
+
+
+
+
 
 /*--------- contacto -------*/
 
@@ -248,10 +317,12 @@ img{
     border: none;
     color: var(--blanco);
     text-transform: uppercase;
-    padding: 1.2rem;
-    
+    padding: 1.2rem; 
+    transition: ease-out .4s;  
 }
-
+.contact-form form button:hover{
+    background-color:  #ff97d9;
+}
 .contact-info{
     background-color:var(--blanco);
     color:var(--secundario) ;
@@ -273,6 +344,60 @@ img{
     padding: 0;
 }
 
+/* ----- NOSOTROS -----*/
+
+.us-cont{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100vh;
+}
+
+.us-cont__bg{
+    background-image: url(../img/fondo_nosotros.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.us-cont__description{
+    background-color: var(--blanco);
+    margin-top: 7rem;
+}
+
+.us-cont__description h2{
+    padding-top: 5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--secundario);
+    text-align: center;
+    font-family: var(--fuenteHeading);
+}
+
+.us-cont__description h1{
+    font-size: 4rem;
+    text-align: center;
+    font-family: var(--fuenteHeading);
+}
+
+.us-cont__description h1 span{
+    font-weight: 700;
+    color: var(--negro);
+}
+
+.us-cont__description p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--fuenteParrafos);
+    text-align: center;
+}
+
+.us-cont__description__wp-icon{
+    display: flex;
+    justify-content: flex-end;
+    margin:0 3rem 4rem 0; 
+}
+
 
 /* pantallas grandes */
 
@@ -292,9 +417,62 @@ img{
 }
 
 
-@media screen and (min-width:350px) and (max-width:767px){
+@media screen and  (max-width:767px){
     .contact-info{
         border-left: none;
         border-top: 1px solid var(--gris);
+    }
+
+    .cont-footer{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+
+    .cont-footer__redes{
+        text-align: center;
+    }
+}
+
+
+
+/*  ----  Phones ----  */
+
+@media screen and (min-width:320px)  and (max-width:480px){
+    
+    /*-- home --*/
+
+
+    .banner-inicio{
+        background-position: center;
+    }
+    .banner-inicio-cont h1{
+        font-size: 6rem;
+    }
+
+    .banner-inicio-cont__btns__boton{
+        font-size: 1.4rem;
+        padding:.7rem ;
+    }
+
+    .iconos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+    }
+    #contenedor-productos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+
+    #contenedor-productos .card{
+        min-width: 18rem;
+        max-width: 18rem;
+        max-height: 30rem;
+    }
+    #contenedor-productos .card img{
+      min-width: 100%;
     }
 }

@@ -30,10 +30,10 @@
                         <a class="nav-link" aria-current="page" href="../index.html">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="pages/contacto.html">contacto</a>                   
+                        <a class="nav-link" href="contacto.html">contacto</a>                   
                       </li>
                     </ul>
                     
@@ -52,6 +52,46 @@
               </nav>
         </div>
     </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Total</th>
+                                <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="items"></tbody>
+                            <tfoot>
+                                <tr id="footer">
+                                <th scope="row" colspan="6">Carrito vacío - comience a comprar!</th>
+                                </tr>
+                            </tfoot>
+                            </table>
+                        <div class="row" id="cards"></div>
+                    </div>
+                
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Terminar compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <main id="cont-contact" class="contenedor">
 
@@ -100,8 +140,16 @@
             </div>
         </div>
 
-
     </main>
-
+    <footer>
+        <div class="cont-footer">
+            <div class="cont-footer__redes">
+                 <h2>¡SIGAMOS CONECTADOS!</h2> 
+                    <a href="https://www.instagram.com/florbazaronline/" target="__blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://wa.me/5492236927705" target="__blank"><i class="bi bi-whatsapp"></i></a>              
+            </div>
+            <p class="cont-footer__copy">&copy; Todos los derechos reservados FlorBazar 2021</p>
+        </div>
+    </footer>
 </body>
 </html>

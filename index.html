@@ -20,15 +20,23 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid container-nav">
                 <a class="navbar-brand logo" href="#"><span>Flor</span>Bazar</a>
-               
-
+            
+                  
+                <a id="toggleMyModal" class="navbar-brand"  data-bs-toggle="modal" data-bs-target="#exampleModal" href="">
+                    <i class="bi bi-cart4"></i>
+                </a>
+                  
+                <button id="burger" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span  class="navbar-toggler-icon"></span>
+                </button>
+                
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="pages/contacto.html">contacto</a>                   
@@ -37,13 +45,6 @@
                 
               </div> <!--navbar-collapse-->
 
-              <a id="toggleMyModal" class="navbar-brand"  data-bs-toggle="modal" data-bs-target="#exampleModal" href="">
-                  <i class="bi bi-cart4"></i>
-                </a>
-                
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              </button>
               
                 
             </div><!-- container-fluid -->
@@ -100,6 +101,10 @@
     <div class="banner-inicio">
         <div class="banner-inicio-cont">
             <h1><span>Flor</span>Bazar</h1>
+           <div class="banner-inicio-cont__btns" >
+                <a href="#seccion-principal"><button class="banner-inicio-cont__btns__boton ">Ver Tienda</button></a>
+                <a href="pages/nosotros.html"><button class="banner-inicio-cont__btns__boton " >Sobre Nosotros</button></a>
+           </div>
         </div>
     </div>
 
@@ -121,7 +126,7 @@
             <h2>Bazar</h2>
         </div>
       </section>
-    <section class="d-flex justify-content-center mt-5 contenido-principal">
+    <section id="seccion-principal" class="d-flex justify-content-center mt-5 contenido-principal">
         <article class="container">
             <div id="contenedor-productos" class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="card m-2 p-2">
@@ -137,7 +142,14 @@
     </section>
 
     <footer>
-
+        <div class="cont-footer">
+            <div class="cont-footer__redes">
+                 <h2>¡SIGAMOS CONECTADOS!</h2> 
+                    <a href="https://www.instagram.com/florbazaronline/" target="__blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://wa.me/5492236927705" target="__blank"><i class="bi bi-whatsapp"></i></a>              
+            </div>
+            <p class="cont-footer__copy">&copy; Todos los derechos reservados FlorBazar 2021</p>
+        </div>
     </footer>
     
 </body>
