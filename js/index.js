@@ -53,12 +53,11 @@ function cargarProductos() {
     productos.push(new Producto(007,"Termo tipo Stanley KALPANA", 5399, "./img/Termo tipo Stanley KALPANA.jpg" ));
     productos.push(new Producto(08,"Termo Stanley Charly 1200cc", 5199, "./img/Termo Stanley Charly 1200cc.jpg" ));
     productos.push(new Producto(09,"Termo engomado de 620cc", 2299, "./img/termo engomado de 620cc.jpg" ));
-    productos.push(new Producto(010,"Termo de acero de 500cc.jpg", 2899, "./img/Termo de acero de 500cc.jpg" ));
-    productos.push(new Producto(011,"Termo de acero de 1 lt.jpg", 3699, "./img/Termo de acero de 1 lt.jpg" ));
+    productos.push(new Producto(010,"Termo de acero de 500cc", 2899, "./img/Termo de acero de 500cc.jpg" ));
+    productos.push(new Producto(011,"Termo de acero de 1 lt", 3699, "./img/Termo de acero de 1 lt.jpg" ));
     productos.push(new Producto(012,"Termo de acero color media manija de 1 litro", 2999, "./img/Termo de acero color media manija de 1 litro.jpg" ));
     productos.push(new Producto(013,"Termo brikenia engomado de 1200cc", 2949, "./img/termo brikenia engomado de 1200cc.jpg" ));
     productos.push(new Producto(014,"Termo acero media manija de 1 litro", 3999, "./img/Termo acero media manija de 1 litro.jpg" ));
-
     productos.push(new Producto(014,"Botella termica de 600cc con filtro", 2899, "./img/Botella termica de 600cc con filtro.jpg" ));
     productos.push(new Producto(014,"Botella térmica con pico color pastel de 600cc", 3200, "./img/Botella térmica con pico color pastel de 600cc.jpg" ));
     productos.push(new Producto(014,"Botella de acero sport brikenia de 350cc", 2499, "./img/Botella de acero sport brikenia de 350cc.jpg" ));
