@@ -1,3 +1,4 @@
+'use strict'
 class Producto {
     constructor(id, nombre, precio, foto) {
         this.id = id;
@@ -23,6 +24,20 @@ const estandarDolaresAmericanos = Intl.NumberFormat('en-US');
 const productos = [];
 let elementosCarrito = [];
 
+// Consumo de API dolar
+let  valorDolarBlue = 0
+
+await obtenerValorDolarBlue().then(a => {
+   valorDolarBlue = a
+})
+async function obtenerValorDolarBlue (){
+    const url = 'https://api.bluelytics.com.ar/v2/latest';
+    const resp = await fetch(url) 
+    const datos = await resp.json()
+    return datos.blue.value_buy
+}
+
+
 
 
 const contenedorProductos = document.getElementById('contenedor-productos');
@@ -44,26 +59,26 @@ dibujarCatalogoProductos();
  */
 
 function cargarProductos() {
-    productos.push(new Producto(001, "Mate calabaza forrado estilo imperial", 1300, "./img/mate_calabaza.jpg"));
-    productos.push(new Producto(002,"Mate forrado sintetico tipo Pampa xl negro", 1400, "./img/mate_forrado_tipo_pampa.jpg"));
-    productos.push(new Producto(003,"Mate Lalo termico de PVC engomado", 1030, "./img/mate_lalo.jpg",));
-    productos.push(new Producto(004,"Mate olivia cero termico", 950, "./img/mate_olivia.jpg", ));
-    productos.push(new Producto(005,"Mate tipo Stanley con bombilla y caja de regalo", 2200, "./img/mate_tipo_stanley.jpg",));
-    productos.push(new Producto(006,"Mate Pampa varios colores con bombilla y estuche", 1470, "./img/mate_pampa.jpg" ));
-    productos.push(new Producto(007,"Termo tipo Stanley KALPANA", 5399, "./img/Termo tipo Stanley KALPANA.jpg" ));
-    productos.push(new Producto(08,"Termo Stanley Charly 1200cc", 5199, "./img/Termo Stanley Charly 1200cc.jpg" ));
-    productos.push(new Producto(09,"Termo engomado de 620cc", 2299, "./img/termo engomado de 620cc.jpg" ));
-    productos.push(new Producto(010,"Termo de acero de 500cc", 2899, "./img/Termo de acero de 500cc.jpg" ));
-    productos.push(new Producto(011,"Termo de acero de 1 lt", 3699, "./img/Termo de acero de 1 lt.jpg" ));
-    productos.push(new Producto(012,"Termo de acero color media manija de 1 litro", 2999, "./img/Termo de acero color media manija de 1 litro.jpg" ));
-    productos.push(new Producto(013,"Termo brikenia engomado de 1200cc", 2949, "./img/termo brikenia engomado de 1200cc.jpg" ));
-    productos.push(new Producto(014,"Termo acero media manija de 1 litro", 3999, "./img/Termo acero media manija de 1 litro.jpg" ));
-    productos.push(new Producto(014,"Botella termica de 600cc con filtro", 2899, "./img/Botella termica de 600cc con filtro.jpg" ));
-    productos.push(new Producto(014,"Botella térmica con pico color pastel de 600cc", 3200, "./img/Botella térmica con pico color pastel de 600cc.jpg" ));
-    productos.push(new Producto(014,"Botella de acero sport brikenia de 350cc", 2499, "./img/Botella de acero sport brikenia de 350cc.jpg" ));
-    productos.push(new Producto(014,"Botella de acero de 500cc color pastel degrade", 3299, "./img/Botella de acero de 500cc color pastel degrade.jpg" ));
-    productos.push(new Producto(014,"Botella de acero color pastel de 500cc", 2799, "./img/Botella de acero color pastel de 500cc.jpg" ));
-    productos.push(new Producto(014,"Botella acero de 750cc termica", 3499, "./img/Botella acero de 750cc termica.jpg" ));
+    productos.push(new Producto(1 , "Mate calabaza forrado estilo imperial", 1300, "./img/mate_calabaza.jpg"));
+    productos.push(new Producto(2 ,"Mate forrado sintetico tipo Pampa xl negro", 1400, "./img/mate_forrado_tipo_pampa.jpg"));
+    productos.push(new Producto(3 ,"Mate Lalo termico de PVC engomado", 1030, "./img/mate_lalo.jpg",));
+    productos.push(new Producto(4 ,"Mate olivia cero termico", 950, "./img/mate_olivia.jpg", ));
+    productos.push(new Producto(5 ,"Mate tipo Stanley con bombilla y caja de regalo", 2200, "./img/mate_tipo_stanley.jpg",));
+    productos.push(new Producto(6 ,"Mate Pampa varios colores con bombilla y estuche", 1470, "./img/mate_pampa.jpg" ));
+    productos.push(new Producto(7 ,"Termo tipo Stanley KALPANA", 5399, "./img/Termo tipo Stanley KALPANA.jpg" ));
+    productos.push(new Producto(8 ,"Termo Stanley Charly 1200cc", 5199, "./img/Termo Stanley Charly 1200cc.jpg" ));
+    productos.push(new Producto(9 ,"Termo engomado de 620cc", 2299, "./img/termo engomado de 620cc.jpg" ));
+    productos.push(new Producto(10 ,"Termo de acero de 500cc", 2899, "./img/Termo de acero de 500cc.jpg" ));
+    productos.push(new Producto(11 ,"Termo de acero de 1 lt", 3699, "./img/Termo de acero de 1 lt.jpg" ));
+    productos.push(new Producto(12 ,"Termo de acero color media manija de 1 litro", 2999, "./img/Termo de acero color media manija de 1 litro.jpg" ));
+    productos.push(new Producto(13 ,"Termo brikenia engomado de 1200cc", 2949, "./img/termo brikenia engomado de 1200cc.jpg" ));
+    productos.push(new Producto(14 ,"Termo acero media manija de 1 litro", 3999, "./img/Termo acero media manija de 1 litro.jpg" ));
+    productos.push(new Producto(15 ,"Botella termica de 600cc con filtro", 2899, "./img/Botella termica de 600cc con filtro.jpg" ));
+    productos.push(new Producto(16 ,"Botella térmica con pico color pastel de 600cc", 3200, "./img/Botella térmica con pico color pastel de 600cc.jpg" ));
+    productos.push(new Producto(17 ,"Botella de acero sport brikenia de 350cc", 2499, "./img/Botella de acero sport brikenia de 350cc.jpg" ));
+    productos.push(new Producto(18 ,"Botella de acero de 500cc color pastel degrade", 3299, "./img/Botella de acero de 500cc color pastel degrade.jpg" ));
+    productos.push(new Producto(19 ,"Botella de acero color pastel de 500cc", 2799, "./img/Botella de acero color pastel de 500cc.jpg" ));
+    productos.push(new Producto(20 ,"Botella acero de 750cc termica", 3499, "./img/Botella acero de 750cc termica.jpg" ));
 }
 
 
@@ -112,17 +127,64 @@ function dibujarCarrito() {
         }
     ); 
 
-
+        
     (elementosCarrito.length == 0) ? contenedorFooterCarrito.innerHTML = `
      <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
      
        ` : 
        contenedorFooterCarrito.innerHTML = `
-     <th scope="row" colspan="5">Total de la compra: $${estandarDolaresAmericanos.format(sumaCarrito)}</th>
-
+     <th scope="row" colspan="2">Total: $${estandarDolaresAmericanos.format(sumaCarrito)}</th>
+     <th scope="row" colspan="5" style="color:gray;font-weight:400; ">Total en dolares: $${Math.round(sumaCarrito / valorDolarBlue) }usd</th>    
        `;
     
-    
+    let botonTerminarCompra = document.querySelector('#botonTerminarCompra');
+    botonTerminarCompra.onclick= ()=>{
+
+        if(elementosCarrito =! null){
+            
+        swal({
+            title: "¡Pedido Confirmado!",
+            text: `Muchas Gracias por Confiar en Nosotros! Nos contactaremos a la brevedad.`,
+            icon: "success",
+            buttons: {
+                cerrar: {
+                    text: "Cerrar",
+                    value: false
+                }
+            }
+        }).then((irACarrito) => {
+
+            if(irACarrito) {
+                //swal("Vamos al carrito!");
+                const myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {keyboard: true});
+                const modalToggle = document.getElementById('toggleMyModal'); 
+                myModal.show(modalToggle);
+
+            }
+        });
+        }
+
+        swal({
+            title: "¡Pedido Confirmado!",
+            text: `Muchas Gracias por Confiar en Nosotros! Nos contactaremos a la brevedad.`,
+            icon: "success",
+            buttons: {
+                cerrar: {
+                    text: "Cerrar",
+                    value: false
+                }
+            }
+        }).then((irACarrito) => {
+
+            if(irACarrito) {
+                //swal("Vamos al carrito!");
+                const myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {keyboard: true});
+                const modalToggle = document.getElementById('toggleMyModal'); 
+                myModal.show(modalToggle);
+
+            }
+        });
+    }
 
 }
 
@@ -227,10 +289,10 @@ function dibujarCatalogoProductos() {
 
    
     
-     if(localStorage.getItem('elementosCarrito')===null){
-         elementosCarrito = []
-     }else{
-     elementosCarrito = JSON.parse(localStorage.getItem('elementosCarrito'));
-     dibujarCarrito()
-     } 
+    if(localStorage.getItem('elementosCarrito')===null){
+        elementosCarrito = []
+    }else{
+        elementosCarrito = JSON.parse(localStorage.getItem('elementosCarrito'));
+        dibujarCarrito()
+    } 
 
