@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../build/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
@@ -19,7 +19,10 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid container-nav">
                     <a class="navbar-brand logo" href="#"><span>Flor</span>Bazar</a>
-                   
+                      
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
     
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -36,13 +39,7 @@
                     
                   </div> <!--navbar-collapse-->
     
-                  <a id="toggleMyModal" class="navbar-brand"  data-bs-toggle="modal" data-bs-target="#exampleModal" href="">
-                      <i class="bi bi-cart4"></i>
-                    </a>
-                    
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                  </button>
+                  
                   
                     
                 </div><!-- container-fluid -->
@@ -51,7 +48,7 @@
     </header>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade modal-lg  " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -95,12 +92,18 @@
         <div class="us-cont__description">
             <h2>Bienvenidos</h2>
             <h1><span>Flor</span>Bazar</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, quasi consequuntur. Reprehenderit ea sint assumenda, omnis repellat quisquam sed dicta</p>
+            <p>FlorBazar es un emprendimiento familiar que inicio a principios del 2021 pero por no tener el tiempo que se necesitaba para hacerlo funcionar, fue abandonado un tiempo.Pero en el 2022 con ayuda de mi hijo pudimos retomarlo y hacerlo crecer!</p>
 
-           <div class="us-cont__description__wp-icon fixed-bottom">
-                <a href="https://wa.me/5492236927705" target="_blank">   
-                    <img src="../img/icon-wsp.png" alt="" width="64px">
-                </a>
+           <div class="us-cont__description__pics">
+                <img src="../build/img/Botella acero de 750cc termica.webp" alt="Botella acero de 750cc termica">
+                <img src="../build/img/Botella de acero color pastel de 500cc.webp" alt="Botella de acero color pastel de 500cc">
+                <img src="../build/img/Botella de acero de 500cc color pastel degrade.webp" alt="Botella de acero de 500cc color pastel degrade">
+                <img src="../build/img/mate_forrado_tipo_pampa.webp" alt="mate forrado tipo pampa">
+                <img src="../build/img/mate_pampa.webp" alt="mate pampa">
+                <img src="../build/img/mate_tipo_stanley.webp" alt="mate tipo stanley">
+                <img src="../build/img/Termo de acero de 500cc.webp" alt="Termo de acero de 500cc">
+                <img src="../build/img/termo engomado de 620cc.webp" alt="Termo engomado de 620cc">
+                <img src="../build/img/Termo brikenia engomado de 1200cc.webp" alt="Termo brikenia engomado de 1200cc">
            </div>
             
         </div>
@@ -110,7 +113,7 @@
         <div class="cont-footer">
             <div class="cont-footer__redes">
                  <h2>¡SIGAMOS CONECTADOS!</h2> 
-                    <a href="https://www.instagram.com/florbazaronline/" target="__blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/florbazar.mdq/" target="__blank"><i class="bi bi-instagram"></i></a>
                     <a href="https://wa.me/5492236927705" target="__blank"><i class="bi bi-whatsapp"></i></a>              
             </div>
             <p class="cont-footer__copy">&copy; Todos los derechos reservados FlorBazar 2021</p>

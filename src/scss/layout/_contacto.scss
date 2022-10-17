@@ -1,0 +1,98 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+
+
+#cont-contact{
+    padding-top:5rem ;
+    p{
+        font-size: 1.5rem;
+    }
+}
+
+.contact-title{
+    font-size: 5rem;
+    font-family: v.$fuenteHeading;
+    font-weight: 400;
+    color: v.$rosaSecundario;
+}
+.contact-wrapper{
+    padding:1rem;
+    box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.3);
+    @include m.tablet{
+        display: grid;
+        grid-template-columns:2fr 1fr;
+        padding: 0;
+    }
+}
+
+.contact-form{
+    background-color: v.$blanco;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .block{
+        grid-column: 1 / 3;
+    }
+    p{
+        margin: 0;
+        padding: 1.5rem;
+    }
+}
+ 
+
+.contact-form form button ,
+.contact-form form input,
+.contact-form form textarea{
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 1px  solid v.$rosaSecundario ;
+}
+
+.contact-form form button{
+    background-color: v.$rosaSecundario;
+    border: none;
+    color: v.$blanco;
+    text-transform: uppercase;
+    padding: 1.2rem; 
+    transition: ease-out .4s;  
+
+    &:hover{
+        background-color: v.$rosa;
+    }
+}
+
+.contact-info{
+    background-color:v.$blanco;
+    color:v.$rosa;
+    font-family: v.$fuenteParrafos;
+    font-size: 1.5rem;
+    padding: 3rem 1rem 0 1rem;
+    border-top: 1px solid v.$gris; 
+    @include m.tablet{
+        border-top: none;
+        border-left: 1px solid v.$gris;
+    }
+}
+.contact-info h2,
+.contact-info ul,
+.contact-info p{
+    text-align: center;
+    margin:0 0 1rem 0;
+
+    @include m.tablet{
+        padding:2rem;
+        text-align: left;
+    }
+}
+
+.contact-info ul{
+    list-style: none;
+    padding: 0;
+}

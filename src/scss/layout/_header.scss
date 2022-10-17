@@ -1,0 +1,61 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+
+#toggleMyModal{  
+    position: absolute;
+    right: 0;
+    top:0;
+    margin-top:1.6rem ;
+    margin-right: 6rem;
+    i{
+        font-size: 2.5rem;
+    }
+}
+
+#price-cart{
+    font-family: v.$fuenteHeading;
+    font-weight: 600;
+}
+
+
+.cont-nav{
+    width: 100%;
+    background-color:v.$rosa;
+}
+
+.cont-nav .navbar{
+    padding: 1.3rem 0;
+}
+
+.cont-nav .navbar .container-fluid a {
+    font-size: 1.8rem;
+    padding: 0 2rem;
+}
+
+.navbar .container-fluid .navbar-brand ,
+.navbar .container-fluid .btn{
+    font-size: 1.8rem;
+    font-family: v.$fuenteHeading;
+    color: v.$blanco;
+}
+
+.cont-nav .navbar .container-fluid .logo{
+    font-size: 2.7rem;
+    font-family: v.$fuenteHeading;
+}
+.cont-nav .navbar .container-fluid .logo span{
+    font-weight: 700;
+}
+
+.navbar a{
+    color:v.$blanco;
+}
+
+.navbar-nav{
+   padding:0 10rem 0 0;
+}
+
+header{
+    margin-bottom: 4.7rem;
+} 

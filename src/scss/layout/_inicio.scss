@@ -1,0 +1,353 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+
+
+
+
+/* -- banner inicio --  */
+
+.banner-inicio{
+    background-image: url(../../build/img/fondomate1.webp); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    h1{
+        color: v.$blanco;
+        text-align: center;
+        font-family: v.$fuenteHeading;
+        font-size: 10rem;
+        margin: 5rem 0;
+        @include m.smallPhone{
+            font-size:8rem;
+        }
+    }
+}
+
+ 
+.banner-inicio h1 span{
+    font-weight: 700;
+}
+
+.banner-inicio-cont{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10rem;
+}
+
+.banner-inicio-cont__btns{
+    display: flex;
+    gap: 2rem;
+}
+
+.banner-inicio-cont__btns__boton{
+    background-color: v.$rosa;
+    font-size: 2rem;
+    color: v.$blanco;
+    font-family: v.$fuenteHeading;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 1rem;
+    transition: ease-out .3s;
+}
+
+
+.banner-inicio-cont__btns__boton:hover{
+    background-color: v.$rosaSecundario;
+}
+
+/*---- MODAL CARITO-----*/
+
+#exampleModal,
+#exampleModal2{
+    font-size: 1.7rem;
+ 
+
+    @include m.smallPhone{
+        font-size: 1.1rem;
+       
+    }
+ 
+}
+
+@include m.smallPhone{
+  
+    #trash{
+        font-size: 1.2rem;
+    }
+    .trash-btn{
+       margin-left:2rem;
+    }
+    .table tr th{
+        padding: 1.4rem 0rem 0 .7rem;
+    }
+    
+}
+
+
+#exampleModal button,
+#exampleModal2 button{
+    font-size: 1.8rem;
+}
+#burger{
+    color: v.$blanco;
+}
+
+//#botonTerminarCompra{
+    
+//}
+
+/* ---- MODAL FINALIZAR COMPRA ----*/
+
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+    p {
+        margin: 0;
+    }
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 60%;
+	background: v.$rosa;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+    @include m.tablet{
+        width: 30%;
+    }
+}
+
+.formulario__btn--secundario{
+    height: 45px;
+	line-height: 45px;
+	width: 20%;
+	background:rgb(143, 143, 143);
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+    @include m.tablet{
+        width: 15%;
+    }
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+/*Titulo modal*/
+.modal-header p{
+    font-weight: 800;
+    font-size:3rem;
+    padding: 1rem;
+    color: #130a04;
+}
+
+
+/* ---seccion principal--- */
+
+#contenedor-productos{
+    max-width:120rem ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly ;
+    gap: 2rem;
+    margin:auto;
+
+    @include m.smallPhone{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap: .3rem;
+       
+    }
+
+   
+
+}
+
+#contenedor-productos .card {
+    
+    min-width: 22rem;
+    box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.3);
+    border: none;
+
+    @include m.smallPhone{
+        min-width: 18rem;
+        max-width: 18rem;
+        min-height: 26rem;
+    }
+
+    .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    }
+}
+
+.contenido-principal{
+    padding-top: 5rem;
+}
+
+.card img{
+    max-width:120rem ;
+    height: 20rem;
+    @include m.smallPhone{
+        max-height: 15rem;
+    }
+}
+
+.iconos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    padding: 4rem;
+    text-align: center;
+
+
+    @include m.tablet{
+        padding-top:5rem ;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+    h2{
+        color: v.$rosa;
+        padding-top: 1.5rem;
+    }
+}
+
+
+.card .card-body{ 
+    .btn{
+        min-height: 3.5rem;
+        font-size: 1.5rem;
+    }
+    p{
+        font-family: v.$fuenteParrafos;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+}
+

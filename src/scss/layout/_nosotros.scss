@@ -1,0 +1,89 @@
+@use 'base/mixins'as m;
+@use 'base/variables'as v;
+
+
+.us-cont{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    height: 100vh;
+
+    @include m.tablet{
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        grid-template-rows: 1fr;
+    }
+  
+}
+
+.us-cont__bg{
+    background-image: url(../img/fondo_nosotros.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    @include m.tablet{
+        height: 100vh; 
+    }
+    
+}
+
+.us-cont__description{
+    background-color: v.$blanco;
+    margin-top: 3rem;
+    @include m.tablet{
+        margin-top:7rem;
+    }
+
+
+    .us-cont__description__pics{
+        width: 70%;
+        margin:3rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        
+    
+        img{
+            width: 12rem;
+            height: 10rem;
+            @include m.tablet{
+                width: 15rem;
+                height: 13rem;
+            }
+        }
+
+    }
+}
+
+.us-cont__description h2{
+    padding-top: 5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: v.$rosa;
+    text-align: center;
+    font-family: v.$fuenteHeading;
+}
+
+.us-cont__description h1{
+    font-size: 4rem;
+    text-align: center;
+    font-family:  v.$fuenteHeading;
+}
+
+.us-cont__description h1 span{
+    font-weight: 700;
+    color: v.$negro;
+}
+
+.us-cont__description p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family:  v.$fuenteParrafos;
+    text-align: center;
+}
+
+.us-cont__description__wp-icon{
+    display: flex;
+    justify-content: flex-end;
+    margin:0 3rem 4rem 0; 
+}

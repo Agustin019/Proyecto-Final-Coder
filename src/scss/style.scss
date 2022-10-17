@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'layout';
+@use 'base';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap');
+
+
+
+
+// /*  ----  Phones ----  */
+
+// @media screen and (min-width:320px)  and (max-width:480px){
+    
+//     /*-- home --*/
+
+
+//     .banner-inicio{
+//         background-position: center;
+//     }
+//     .banner-inicio-cont h1{
+//         font-size: 6rem;
+//     }
+
+//     .banner-inicio-cont__btns__boton{
+//         font-size: 1.4rem;
+//         padding:.7rem ;
+//     }
+
+
+
+
+//     #contenedor-productos .card{
+//         min-width: 18rem;
+//         max-width: 18rem;
+//         max-height: 30rem;
+//     }
+//     #contenedor-productos .card img{
+//       min-width: 100%;
+//     }
+// }

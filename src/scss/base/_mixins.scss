@@ -1,0 +1,33 @@
+@use 'base/variables'as v;
+
+// Mixins Tamaños de pantallas
+
+@mixin smallPhone{
+    @media screen and (min-width:v.$smallPhone) and (max-width:v.$phone) {
+        @content;
+    }
+}
+
+@mixin phone{
+    @media screen and (min-width:v.$phone) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media screen and (min-width:v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media screen and (min-width:v.$desktop) {
+        @content;
+    }
+}
+
+@mixin desktopXL{
+    @media screen and (min-width:v.$desktopXL) {
+        @content;
+    }
+}
