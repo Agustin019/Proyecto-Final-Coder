@@ -402,7 +402,7 @@ header {
 }
 
 .us-cont__bg {
-  background-image: url(../img/fondo_nosotros.jpg);
+  background-image: url(../../../build/img/fondo_nosotros.webp);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
