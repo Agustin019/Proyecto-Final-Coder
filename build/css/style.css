@@ -419,7 +419,7 @@ header {
 }
 @media screen and (min-width: 768px) {
   .us-cont__description {
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
 }
 .us-cont__description .us-cont__description__pics {
