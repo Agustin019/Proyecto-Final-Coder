@@ -84,7 +84,7 @@ function cargarProductos() {
     productos.push(new Producto(10, "Termo de acero de 500cc", 2899, "./build/img/Termo de acero de 500cc.webp"));
     productos.push(new Producto(11, "Termo de acero de 1 lt", 3699, "./build/img/Termo de acero de 1 lt.webp"));
     productos.push(new Producto(12, "Termo de acero color media manija de 1 litro", 2999, "./build/img/Termo de acero color media manija de 1 litro.webp"));
-    productos.push(new Producto(13, "Termo brikenia engomado de 1200cc", 2949, "./build/img/termo brikenia engomado de 1200cc.webp"));
+    productos.push(new Producto(13, "Termo brikenia engomado de 1200cc", 2949, "./build/img/Termo brikenia engomado de 1200cc"));
     productos.push(new Producto(14, "Termo acero media manija de 1 litro", 3999, "./build/img/Termo acero media manija de 1 litro.webp"));
     productos.push(new Producto(15, "Botella termica de 600cc con filtro", 2899, "./build/img/Botella termica de 600cc con filtro.webp"));
     productos.push(new Producto(16, "Botella térmica con pico color pastel de 600cc", 3200, "./build/img/Botella térmica con pico color pastel de 600cc.webp"));
