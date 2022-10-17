@@ -72,8 +72,8 @@ dibujarCatalogoProductos();
  */
 
 function cargarProductos() {
-    productos.push(new Producto(1, "Mate calabaza forrado estilo imperial", 1300, "../build/img/mate_calabaza.webp"));
-    productos.push(new Producto(2, "Mate forrado sintetico tipo Pampa xl negro", 1400, "../build/img/mate_forrado_tipo_pampa.webp"));
+    productos.push(new Producto(1, "Mate calabaza forrado estilo imperial", 1300, "./build/img/mate_calabaza.webp"));
+    productos.push(new Producto(2, "Mate forrado sintetico tipo Pampa xl negro", 1400, "./build/img/mate_forrado_tipo_pampa.webp"));
     productos.push(new Producto(3, "Mate Lalo termico de PVC engomado", 1030, "../build/img/mate_lalo.webp", ));
     productos.push(new Producto(4, "Mate olivia cero termico", 950, "../build/img/mate_olivia.webp", ));
     productos.push(new Producto(5, "Mate tipo Stanley con bombilla y caja de regalo", 2200, "../build/img/mate_tipo_stanley.webp", ));
