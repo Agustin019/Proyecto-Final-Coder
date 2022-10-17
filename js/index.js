@@ -74,24 +74,24 @@ dibujarCatalogoProductos();
 function cargarProductos() {
     productos.push(new Producto(1, "Mate calabaza forrado estilo imperial", 1300, "./build/img/mate_calabaza.webp"));
     productos.push(new Producto(2, "Mate forrado sintetico tipo Pampa xl negro", 1400, "./build/img/mate_forrado_tipo_pampa.webp"));
-    productos.push(new Producto(3, "Mate Lalo termico de PVC engomado", 1030, "../build/img/mate_lalo.webp", ));
-    productos.push(new Producto(4, "Mate olivia cero termico", 950, "../build/img/mate_olivia.webp", ));
-    productos.push(new Producto(5, "Mate tipo Stanley con bombilla y caja de regalo", 2200, "../build/img/mate_tipo_stanley.webp", ));
-    productos.push(new Producto(6, "Mate Pampa varios colores con bombilla y estuche", 1470, "../build/img/mate_pampa.webp"));
-    productos.push(new Producto(7, "Termo tipo Stanley KALPANA", 5399, "../build/img/Termo tipo Stanley KALPANA.webp"));
-    productos.push(new Producto(8, "Termo Stanley Charly 1200cc", 5199, "../build/img/Termo Stanley Charly 1200cc.webp"));
-    productos.push(new Producto(9, "Termo engomado de 620cc", 2299, "../build/img/termo engomado de 620cc.webp"));
-    productos.push(new Producto(10, "Termo de acero de 500cc", 2899, "../build/img/Termo de acero de 500cc.webp"));
-    productos.push(new Producto(11, "Termo de acero de 1 lt", 3699, "../build/img/Termo de acero de 1 lt.webp"));
-    productos.push(new Producto(12, "Termo de acero color media manija de 1 litro", 2999, "../build/img/Termo de acero color media manija de 1 litro.webp"));
-    productos.push(new Producto(13, "Termo brikenia engomado de 1200cc", 2949, "../build/img/termo brikenia engomado de 1200cc.webp"));
-    productos.push(new Producto(14, "Termo acero media manija de 1 litro", 3999, "../build/img/Termo acero media manija de 1 litro.webp"));
-    productos.push(new Producto(15, "Botella termica de 600cc con filtro", 2899, "../build/img/Botella termica de 600cc con filtro.webp"));
-    productos.push(new Producto(16, "Botella térmica con pico color pastel de 600cc", 3200, "../build/img/Botella térmica con pico color pastel de 600cc.webp"));
-    productos.push(new Producto(17, "Botella de acero sport brikenia de 350cc", 2499, "../build/img/Botella de acero sport brikenia de 350cc.webp"));
-    productos.push(new Producto(18, "Botella de acero de 500cc color pastel degrade", 3299, "../build/img/Botella de acero de 500cc color pastel degrade.webp"));
-    productos.push(new Producto(19, "Botella de acero color pastel de 500cc", 2799, "../build/img/Botella de acero color pastel de 500cc.webp"));
-    productos.push(new Producto(20, "Botella acero de 750cc termica", 3499, "../build/img/Botella acero de 750cc termica.webp"));
+    productos.push(new Producto(3, "Mate Lalo termico de PVC engomado", 1030, "./build/img/mate_lalo.webp", ));
+    productos.push(new Producto(4, "Mate olivia cero termico", 950, "./build/img/mate_olivia.webp", ));
+    productos.push(new Producto(5, "Mate tipo Stanley con bombilla y caja de regalo", 2200, "./build/img/mate_tipo_stanley.webp", ));
+    productos.push(new Producto(6, "Mate Pampa varios colores con bombilla y estuche", 1470, "./build/img/mate_pampa.webp"));
+    productos.push(new Producto(7, "Termo tipo Stanley KALPANA", 5399, "./build/img/Termo tipo Stanley KALPANA.webp"));
+    productos.push(new Producto(8, "Termo Stanley Charly 1200cc", 5199, "./build/img/Termo Stanley Charly 1200cc.webp"));
+    productos.push(new Producto(9, "Termo engomado de 620cc", 2299, "./build/img/termo engomado de 620cc.webp"));
+    productos.push(new Producto(10, "Termo de acero de 500cc", 2899, "./build/img/Termo de acero de 500cc.webp"));
+    productos.push(new Producto(11, "Termo de acero de 1 lt", 3699, "./build/img/Termo de acero de 1 lt.webp"));
+    productos.push(new Producto(12, "Termo de acero color media manija de 1 litro", 2999, "./build/img/Termo de acero color media manija de 1 litro.webp"));
+    productos.push(new Producto(13, "Termo brikenia engomado de 1200cc", 2949, "./build/img/termo brikenia engomado de 1200cc.webp"));
+    productos.push(new Producto(14, "Termo acero media manija de 1 litro", 3999, "./build/img/Termo acero media manija de 1 litro.webp"));
+    productos.push(new Producto(15, "Botella termica de 600cc con filtro", 2899, "./build/img/Botella termica de 600cc con filtro.webp"));
+    productos.push(new Producto(16, "Botella térmica con pico color pastel de 600cc", 3200, "./build/img/Botella térmica con pico color pastel de 600cc.webp"));
+    productos.push(new Producto(17, "Botella de acero sport brikenia de 350cc", 2499, "./build/img/Botella de acero sport brikenia de 350cc.webp"));
+    productos.push(new Producto(18, "Botella de acero de 500cc color pastel degrade", 3299, "./build/img/Botella de acero de 500cc color pastel degrade.webp"));
+    productos.push(new Producto(19, "Botella de acero color pastel de 500cc", 2799, "./build/img/Botella de acero color pastel de 500cc.webp"));
+    productos.push(new Producto(20, "Botella acero de 750cc termica", 3499, "./build/img/Botella acero de 750cc termica.webp"));
 }
 
 
